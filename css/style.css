@@ -30,6 +30,19 @@ header {
   margin: auto;
 }
 
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .logo {
   color: #9f7aea;
   font-size: 1.5em;
@@ -51,6 +64,23 @@ header {
   color: #9f7aea;
 }
 
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-right a {
+  color: #ffffff;
+  font-size: 1.3em;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  transform: scale(1.2);
+  color: #9f7aea;
+}
+
 .hero {
   padding: 100px 20px;
   text-align: center;
@@ -66,6 +96,27 @@ header {
   margin-top: 10px;
   font-size: 1.2em;
   color: #ccc;
+}
+
+.hero-summary {
+  margin-top: 40px;
+  background-color: #1a1a2e;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-summary p {
+  font-size: 1em;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.hero-summary strong {
+  color: #9f7aea;
 }
 
 .social-icons {
@@ -221,412 +272,19 @@ button[type="submit"]:hover {
   .hero p {
     font-size: 1em;
   }
-}
 
-/* style.css */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0d0d1a;
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #1a1a2e;
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.logo {
-  color: #9f7aea;
-  font-size: 1.5em;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #9f7aea;
-}
-
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-  background: linear-gradient(to bottom, #0d0d1a, #1a1a2e);
-}
-
-.hero h2 {
-  font-size: 2.5em;
-  color: #ffffff;
-}
-
-.hero p {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #ccc;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
-  filter: brightness(0) invert(1);
-}
-
-.social-icons a:hover img {
-  transform: scale(1.2);
-  filter: brightness(0) invert(48%) sepia(89%) saturate(748%) hue-rotate(217deg) brightness(90%) contrast(88%);
-}
-
-.sobre {
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.sobre h2 {
-  color: #9f7aea;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1a1a2e;
-  color: #777;
-  font-size: 0.9em;
-}
-
-/* Projetos */
-.projetos {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.projetos h2 {
-  color: #9f7aea;
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background-color: #1a1a2e;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(159, 122, 234, 0.5);
-}
-
-.card h3 {
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-.card a {
-  color: #9f7aea;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
+  .navbar-left,
+  .navbar-right {
     flex-direction: column;
     gap: 10px;
   }
 
-  .hero h2 {
-    font-size: 2em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-}
-
-/* style.css */
-
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0d0d1a;
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #1a1a2e;
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.logo {
-  color: #9f7aea;
-  font-size: 1.5em;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #9f7aea;
-}
-
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-  background: linear-gradient(to bottom, #0d0d1a, #1a1a2e);
-}
-
-.hero h2 {
-  font-size: 2.5em;
-  color: #ffffff;
-}
-
-.hero p {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #ccc;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
-  filter: brightness(0) invert(1);
-}
-
-.social-icons a:hover img {
-  transform: scale(1.2);
-  filter: brightness(0) invert(48%) sepia(89%) saturate(748%) hue-rotate(217deg) brightness(90%) contrast(88%);
-}
-
-.sobre {
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.sobre h2 {
-  color: #9f7aea;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1a1a2e;
-  color: #777;
-  font-size: 0.9em;
-}
-
-/* Projetos */
-.projetos {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.projetos h2 {
-  color: #9f7aea;
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background-color: #1a1a2e;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(159, 122, 234, 0.5);
-}
-
-.card h3 {
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-.card a {
-  color: #9f7aea;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-/* Contato */
-.contato {
-  padding: 60px 20px;
-  max-width: 600px;
-  margin: auto;
-}
-
-.contato h2 {
-  text-align: center;
-  color: #9f7aea;
-  margin-bottom: 30px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-label {
-  font-weight: bold;
-}
-
-input, textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background-color: #2a2a40;
-  color: #fff;
-}
-
-input:focus, textarea:focus {
-  outline: 2px solid #9f7aea;
-}
-
-button[type="submit"] {
-  padding: 12px;
-  background-color: #9f7aea;
-  border: none;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: #7c5bdc;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero h2 {
-    font-size: 2em;
-  }
-
-  .hero p {
-    font-size: 1em;
+  .hero-summary {
+    padding: 20px;
   }
 }
