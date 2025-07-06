@@ -68,23 +68,6 @@ header {
   color: #ccc;
 }
 
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  display: inline-block;
-  color: #ffffff;
-  font-size: 1.8em;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #9f7aea;
-}
-
 .sobre {
   padding: 60px 20px;
   max-width: 800px;
